@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
-require_once "../../config.php";
 
 set_time_limit(0);
 error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+require_once __DIR__ . '/../../config.php';
 
 //////////////////////////////////
 //   ****  SQL SETTINGS  ****   //
