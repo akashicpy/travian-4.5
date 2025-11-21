@@ -1,2 +1,7 @@
 games/mcache/
 games/hcache/
+
+# security configs
+config.php
+.env
+credentials.php

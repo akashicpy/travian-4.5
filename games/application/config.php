@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
+require_once "../../config.php";
 
 set_time_limit(0);
 error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
@@ -7,10 +8,10 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
 //////////////////////////////////
 //   ****  SQL SETTINGS  ****   //
 //////////////////////////////////
-define("SQL_SERVER", "localhost");
-define("SQL_USER", "travian");
-define("SQL_PASS", "mkla2110");
-define("SQL_DB", "travian46");
+define("SQL_SERVER", GAME_HOST);
+define("SQL_USER", DB_USER);
+define("SQL_PASS", DB_PASS);
+define("SQL_DB", DB_NAME);
 
 
 define('APP_MAIN_PATH', dirname(realpath(__DIR__)));
