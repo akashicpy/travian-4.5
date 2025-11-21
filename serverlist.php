@@ -37,7 +37,8 @@
 									<div class="transformWrapper">
 										<div class="worldGroup">
 <?php
-$db = mysqli_connect("localhost", "root", "", "travian");
+require_once "./games/application/config.php";
+$db = mysqli_connect(SQL_SERVER, SQL_USER, SQL_PASS, SQL_DB);
 $count_users = mysqli_num_rows($db->query("SELECT * FROM `users` WHERE `id` > 4"));
 $count_online = mysqli_num_rows($db->query("SELECT * FROM `users` WHERE " . time() . "-`timestamp` < (60*60) AND tribe!=5 AND tribe!=0"));
 $t = strtotime('12.09.2020 00:00:00');
