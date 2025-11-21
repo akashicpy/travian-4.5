@@ -61,7 +61,7 @@
 					if($village->getProd("crop")>0){
 						$res=array(38700,16800,59400,13400);
 	                   	$time = $technology->calculateAvaliable(24,$res);
-		                echo "<br><span class=\"none\">There will be enough resources ".$time[0]." в ".$time[1]."</span></div></td>";
+		                echo "<br><span class=\"none\">There will be enough resources ".$time[0]." at ".$time[1]."</span></div></td>";
 					} else {
 						echo "<br><span class=\"none\">Not enough grain.</span></div></td>";
 					}

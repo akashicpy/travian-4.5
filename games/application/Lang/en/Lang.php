@@ -982,6 +982,7 @@ $lang['header'] = array (
 							10 => "Warehouse",
 							11 => "Granary",
 							12 => "Smithy",
+							13 => "Smithy",
 							14 => "Tournament Square",
 							15 => "Main Building",
 							16 => "Rally Point",
@@ -1005,7 +1006,7 @@ $lang['header'] = array (
 							34 => "Stonemason",
 							35 => "Brewery",
 							36 => "Trapper",
-							37 => "Tavern",
+							37 => "Hero Mansion",
 							38 => "Great Warehouse",
 							39 => "Great Granary",
 							40 => "World Wonder",
@@ -1027,7 +1028,7 @@ $lang['desc'][ 9 ] = array ( 0 => 'The bakery flour to bake bread . Grain produc
 $lang['desc'][ 10 ] = array ( 0 => 'The resources wood, clay and iron are stored in your warehouse. By increasing its level you increase your warehouses capacity.');
 $lang['desc'][ 11 ] = array ( 0 => 'The wheat from wheat fields is stored in the granary. The higher the level, the larger the storage capacity.');
 $lang['desc'][ 12 ] = array ( 0 => 'In the melter can forge better weapons warriors. With the development of the building increases the maximum level of improvement of weapons.');
-$lang['desc'][ 13 ] = array ( 0 => 'smelters forge armor can improve the performance of soldiers. With the development of the building increases the maximum level of improvement of armor.');
+$lang['desc'][ 13 ] = array ( 0 => 'In the melter can forge better weapons warriors. With the development of the building increases the maximum level of improvement of weapons.');
 $lang['desc'][ 14 ] = array ( 0 => 'At your warriors train endurance. With the development arena increases the movement speed of your troops at distances greater than 20 fields.');
 $lang['desc'][ 15 ] = array ( 0 => 'The architects of the village live in the main building. The higher the level, the faster other buildings will be built or upgraded.');
 $lang['desc'][ 16 ] = array ( 0 => 'The villages troops meet at the rally point. From here you can send them out to reinforce, raid, or conquer another village.');
@@ -2041,7 +2042,7 @@ Farm resources are calculated every ~30 seconds.<br>
 Warehouse storage and Crop are equal in farms.<br>
 The list is sorted by the time of creation of every item.<br>
 </small>");
-define("PROTECTION_TIME","You will be under beginner protection for <b><span class=\"timer\" counting=\"down\" value=\"%s\">%s</span></b>.");
+define("PROTECTION_TIME","Your beginner protection expires in <b><span class=\"timer\" counting=\"down\" value=\"%s\">%s</span></b>.");
 define("ACCOUNT_DELETION","Your account will be deleted in <b><span id=\"timer100\">%s</span></b>");
 define("Ally_dorf1","Alliance");
 define("DIRECT_LINK","Direct link");
@@ -3258,6 +3259,7 @@ define("sokr19","There are no artifacts.");
 define("sokr20","Large artifacts ");
 define("sokr21","No active.");
 define("sokr22","Active");
+define("sokr23","Nearby artifacts");
 
 //taverna
 define("TVRN0","Oasis occupied by");
@@ -3281,7 +3283,7 @@ define("TVRN15","Crop");
 define("rpts0","Troops");
 define("rpts1","Casualties");
 define("rpts2","Captured");
-define("rpts3","Infromation");
+define("rpts3","Information");
 define("rpts4","from the village");
 define("rpts5","Reinforcements");
 define("rpts6","Subject");

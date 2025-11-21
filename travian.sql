@@ -460,15 +460,16 @@ CREATE TABLE `config` (
   `Lang` text NOT NULL,
   `fvillage` int(11) NOT NULL,
   `fvillaged` int(11) NOT NULL,
-  `MEDALS` int(11) NOT NULL
+  `MEDALS` int(11) NOT NULL,
+  `allowBuyRes` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `config`
 --
 
-INSERT INTO `config` (`id`, `lastmedal`, `lastioasisUpdate`, `lastAchiev`, `regstatus`, `global`, `SERVER_NAME`, `DEFAULT_GOLD`, `AUCTIONTIME`, `GP_LOCATE`, `OPENING`, `OASISX`, `SPEED`, `MOMENT_TRAIN`, `ARTEFACTS`, `WW_PLAN`, `CRANNY_CAP`, `ADV_TIME`, `TRAPPER_CAPACITY`, `STORAGE_MULTIPLIER`, `INCREASE_SPEED`, `PROTECTIOND`, `TRADER_CAPACITY`, `PLUS_TIME`, `PLUS_PRODUCTION`, `HOMEPAGE`, `adminMail`, `Plus`, `goldClub`, `addonProduction`, `plusFeatures`, `storageUpgrade`, `25pFaster`, `allSmithy`, `searchAll`, `resources01`, `resources02`, `resources03`, `protect01`, `protect02`, `protect03`, `resources01A`, `resources02A`, `resources03A`, `Lang`, `fvillage`, `fvillaged`, `MEDALS`) VALUES
-(1, 1711198231, 1711198231, 1711198233, 1, '', 'TRAVIAN FIRE AND SAND', 100, 10800, 'gpack/img_rtl/', 2147483647, 1, 50, 0, 2147483647, 2147483647, 2000, 10, 1, 2000, 200, 43200, 1, 604800, 604800, 'http://test3.travianforce.com.es/', 'admin@test.com', 10, 100, 5, 1, 25, 400, 80, 50, 1000, 2500, 4900, 75, 150, 250, 180000000, 560000000, 1800000000, 'en', 0, 0, 604800);
+INSERT INTO `config` (`id`, `lastmedal`, `lastioasisUpdate`, `lastAchiev`, `regstatus`, `global`, `SERVER_NAME`, `DEFAULT_GOLD`, `AUCTIONTIME`, `GP_LOCATE`, `OPENING`, `OASISX`, `SPEED`, `MOMENT_TRAIN`, `ARTEFACTS`, `WW_PLAN`, `CRANNY_CAP`, `ADV_TIME`, `TRAPPER_CAPACITY`, `STORAGE_MULTIPLIER`, `INCREASE_SPEED`, `PROTECTIOND`, `TRADER_CAPACITY`, `PLUS_TIME`, `PLUS_PRODUCTION`, `HOMEPAGE`, `adminMail`, `Plus`, `goldClub`, `addonProduction`, `plusFeatures`, `storageUpgrade`, `25pFaster`, `allSmithy`, `searchAll`, `resources01`, `resources02`, `resources03`, `protect01`, `protect02`, `protect03`, `resources01A`, `resources02A`, `resources03A`, `Lang`, `fvillage`, `fvillaged`, `MEDALS`, `allowBuyRes`) VALUES
+(1, 1711198231, 1711198231, 1711198233, 1, '', 'TRAVIAN FIRE AND SAND', 100, 10800, 'gpack/img_rtl/', 2147483647, 1, 50, 0, 2147483647, 2147483647, 2000, 10, 1, 2000, 200, 43200, 1, 604800, 604800, 'http://test3.travianforce.com.es/', 'admin@test.com', 10, 100, 5, 1, 25, 400, 80, 50, 1000, 2500, 4900, 75, 150, 250, 180000000, 560000000, 1800000000, 'en', 0, 0, 604800, 1);
 
 -- --------------------------------------------------------
 

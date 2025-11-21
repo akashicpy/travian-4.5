@@ -367,10 +367,10 @@ if($i > 0){
                     }
 
                     if(ARTEFACTS>time()) {
-                        echo "<li>Keep on spawn artefacts <span class=\"timer\" counting=\"down\" value=\"".(ARTEFACTS-time())."\">".$generator->getTimeFormat((ARTEFACTS-time()))."</span> hour.</li>";
+                        echo "<li>Artifacts will be released after <span class=\"timer\" counting=\"down\" value=\"".(ARTEFACTS-time())."\">".$generator->getTimeFormat((ARTEFACTS-time()))."</span>.</li>";
                      }
                      if(WW_PLAN>time()) {
-                        echo "<li>Keep on spawn plan Building <span class=\"timer\" counting=\"down\" value=\"".(WW_PLAN-time())."\">".$generator->getTimeFormat((WW_PLAN-time()))."</span> hour.</li>";
+                        echo "<li>Building plans will be released after <span class=\"timer\" counting=\"down\" value=\"".(WW_PLAN-time())."\">".$generator->getTimeFormat((WW_PLAN-time()))."</span>.</li>";
                      }
 
                     ?>

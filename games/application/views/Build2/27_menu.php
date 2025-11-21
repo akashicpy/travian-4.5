@@ -20,7 +20,7 @@ if(isset($_GET['show'])){
     <div <?php if(isset($_GET['t']) && $_GET['t'] == 5) { echo "class=\"container active\""; } else { echo "class=\"container normal\""; } ?>>
         <div class="background-start">&nbsp;</div>
         <div class="background-end">&nbsp;</div>
-        <div class="content"><a href="build.php?id=<?php echo $id; ?>&t=5" title="Artefacts around" class="tabItem">Artefacts around</a></div>
+        <div class="content"><a href="build.php?id=<?php echo $id; ?>&t=5" title="<?= sokr23 ?>" class="tabItem"><?= sokr23 ?></a></div>
     </div>
     <div <?php if(isset($_GET['t']) && $_GET['t'] == 2 || $isSM) { echo "class=\"container active\""; } else { echo "class=\"container normal\""; } ?>>
         <div class="background-start">&nbsp;</div>

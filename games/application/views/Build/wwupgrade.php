@@ -114,7 +114,7 @@ $time=time();
     else if($bindicate == 7) {
         $neededtime = $building->calculateAvaliable($id,$village->resarray['f'.$id.'t'],1+$loopsame+$doublebuild+$master);
         if($neededtime==0){echo "<span class=\"none\">Sufficient resources Never</span>";}else{
-            echo "<span class=\"none\">Enough resources  ".$neededtime[0]." в  ".$neededtime[1]."</span>";}
+            echo "<span class=\"none\">Enough resources  ".$neededtime[0]." at ".$neededtime[1]."</span>";}
     }
     else if($bindicate == 8) {
             echo "<button type=\"submit\" value=\"Upgrade level\" class=\"green small\" onclick=\"window.location.href = 'dorf2.php?а=$id&c=$session->checker'; return false;\">

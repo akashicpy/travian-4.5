@@ -11,7 +11,7 @@
         <div class="boxes-bl"></div>
         <div class="boxes-br"></div>
         <div class="boxes-bc"></div>
-        <div class="boxes-contents cf">attacker            : plundge</div>
+        <div class="boxes-contents cf">Attacker : Plunge</div>
     </div>
 </div>
 <div class="clear"></div>
@@ -58,7 +58,7 @@
         <th>Andت</th>
         <td style="font-size:11px">190</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td><td class="none" style="font-size:11px">0</td>    </tr>
     </tbody>
-</table>                <h4 class="round">attack Settings</h4>
+</table>                <h4 class="round">Attack Settings</h4>
 
         <form action="build.php?id=39&amp;tt=3" method="post">
         <div id="attacker">
@@ -82,7 +82,7 @@
                 <table class="fill_in transparent" cellpadding="1" cellspacing="0">
                     <tbody>
                     <tr>
-                        <th>Drown </th>
+                        <th>Plunge </th>
                     </tr>
                     <tr>
                         <td class="details">
@@ -320,7 +320,7 @@
                             <div class="boxes-bl"></div>
                             <div class="boxes-br"></div>
                             <div class="boxes-bc"></div>
-                            <div class="boxes-contents cf">attacker    </div>
+                            <div class="boxes-contents cf">Attacker</div>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -387,14 +387,14 @@
                             <div class="boxes-bl"></div>
                             <div class="boxes-br"></div>
                             <div class="boxes-bc"></div>
-                            <div class="boxes-contents cf"> attack type   </div>
+                            <div class="boxes-contents cf"> Attack type   </div>
                         </div>
                     </div>
                     <div class="clear"></div>
 
                     <div class="choice">
                         <input class="radio" type="radio" name="ktyp" value="1">
-                        <label>Full</label><br>
+                        <label>Attack</label><br>
                         <input class="radio" type="radio" name="ktyp" value="2" checked="checked">
                         <label>Raid</label><br>
                         <input type="hidden" name="uid" value="206">
