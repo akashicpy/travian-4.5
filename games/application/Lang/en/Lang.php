@@ -1847,9 +1847,9 @@ define("IEFF141", "+1500 to hero strength For every Marksman: +10 attack and +10
 define("ITEM142", "Short Spatha Sword of the Marauder");
 define("IEFF142", "+500 to hero strength For every Marauder: +9 attack and +9 defence");
 define("ITEM143", "Spatha Sword of the Marauder");
-define("IEFF143", "+500 to hero strength For every Marauder: +12 attack and +12 defence");
+define("IEFF143", "+1000 to hero strength For every Marauder: +12 attack and +12 defence");
 define("ITEM144", "Long Spatha Sword of the Marauder");
-define("IEFF144", "+500 to hero strength For every Marauder: +15 attack and +15 defence");
+define("IEFF144", "+1500 to hero strength For every Marauder: +15 attack and +15 defence");
 define("HEROI0", "Attributes");
 define("HEROI1", "Point");
 define("HEROI2", "attribute power tooltip");
