@@ -45,7 +45,6 @@ $rp = 3 * SPEED * $session->heroD['product'];
 
         <div class="attribute heroStatus">
             <?php if($session->heroD['hide']==0){ echo HEROI39;}else{ echo HEROI40;}?></div>
-
             <table cellspacing="0" cellpadding="0" class="transparent attributes noPointsToSet">
 	<tbody>
 
@@ -138,7 +137,6 @@ $rp = 3 * SPEED * $session->heroD['product'];
     $vRes = ($village->awood + $village->aclay + $village->airon + $village->acrop);
     $hRes = ($hero_t[$session->heroD['level']]['wood'] + $hero_t[$session->heroD['level']]['clay'] + $hero_t[$session->heroD['level']]['iron'] + $hero_t[$session->heroD['level']]['crop']);
     $checkT = $session->heroD['revivetime'] != 0;
-
     if (!$checkT) {
     ?>
 
