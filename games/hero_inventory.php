@@ -451,10 +451,6 @@ if (isset($_GET['inventory']) && !$dis) {
 											}
 											?>
 											<div class="market">
-												<pre>
-										<?php print_r($sql); ?>
-										<?php print_r($Travian->getItemData(4, 136)); ?>
-									</pre>
 												<a class="buy arrow" href="hero_auction.php?action=buy"><?= herohero4 ?></a>
 												<a class="sell arrow" href="hero_auction.php?action=sell"><?= herohero5 ?></a>
 												<div class="clear"></div>
