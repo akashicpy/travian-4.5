@@ -1,9 +1,34 @@
-![image](https://github.com/user-attachments/assets/be435bd3-6caa-453b-aad4-ef804cfc8c56)info : https://forum.ragezone.com/threads/travian-4-5-with-6-tribes-files-download-d.1227038/
+![image](./sample/Endgame%20screenshot.png)
 
-Setup video
-https://vimeo.com/1026035614
+Download xampp and start setup on your computer
 
-Time link
-https://www.unixtimestamp.com/index.php
+Source setup:
 
-https://vimeo.com/999988007
+open PHPMyAdmin
+
+Create your a new database call it whatever you want
+
+Navigate to the created database select Import tab
+
+Browse and choose travian.sql file in the root directory then import the data
+
+Create a config.php file in the root directory
+
+copy and paste this in the config file
+
+<?php
+define("GAME_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "travian");
+?>
+
+replace the information with your prefer environment info
+
+Enjoy the game!
+
+Apache=2.4.43
+PHP=7.3.17
+MYSQL=5.2.3
+
+Any bugs please report to Issues tab from this repository I'll investigate and fix If I could
