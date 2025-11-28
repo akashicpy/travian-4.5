@@ -1217,7 +1217,7 @@ define("UPG8", "Develop Warehouse.");
 define("UPG9", "Develop Granary. ");
 define("UPG10", "Enough resources - Never");
 define("UPG11", "Upgrade to level ");
-
+define("UPG12", "Construct building with masterbuilder");
 
 //отпраinка inойск
 define("nap0", "Reinforcement");
