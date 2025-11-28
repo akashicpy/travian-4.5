@@ -3459,7 +3459,7 @@ Travian.Tip.refresh();
                             </div>
                         </div>
                     </div>
-                    <div class="button-content">' . $lang['Plus']['BuyButton'] . '<img src="img/x.gif" class="goldIcon" alt=""><span class="goldValue">' . (MAX_LEVEL_COST * 18) . '</span></div></div>
+                    <div class="button-content">' . $lang['Plus']['BuyButton'] . '<img src="img/x.gif" class="goldIcon" alt=""><span class="goldValue">' . ($config['upAllResPrice']) . '</span></div></div>
                     </button>
                     ' . ($p->checkupAll() ? '<script type="text/javascript" id="buttonW1_script">
                     window.addEvent(\'domready\', function () {

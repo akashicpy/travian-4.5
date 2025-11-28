@@ -1,4 +1,4 @@
-<?php 
+<?php
 $lang['Plus'] = array(
 	'Gold' => 'Gold',
 	'Buy' => 'Buy Gold',
@@ -19,7 +19,7 @@ $lang['Plus'] = array(
 	'Pay02' => 'Your new gold balance',
 	'Pay03' => 'Price',
 	'Pay04' => 'Buy now',
-	
+
 	'Redeem01' => 'Redeem code',
 	'Redeem02' => 'If you have a redeem code, enter your code to redeem your purchase below',
 	'Redeem03' => 'Purchased code',
@@ -100,19 +100,19 @@ $lang['Plus'] = array(
 	'popupPlus20' => 'Time:',
 
 	// Plus Features
-    'PFeatures' => 'Plus Features',
-    'General' => 'General',
-    'GSetting' => 'General Options',
-    'Troops' => 'Troops',
-    'BuyRes' => 'Buy Resources',
-    'Protection' => 'Protection',
-    'PPacks' => 'Protection packages',
+	'PFeatures' => 'Plus Features',
+	'General' => 'General',
+	'GSetting' => 'General Options',
+	'Troops' => 'Troops',
+	'BuyRes' => 'Buy Resources',
+	'Protection' => 'Protection',
+	'PPacks' => 'Protection packages',
 	'BuyButton' => 'Buy',
 	'Deliver' => 'Delivery',
 	'Immidiate' => 'Immediately',
 	'Hour' => 'hour',
 
-	'GS01' => 'Upgrade all fields to level 20',
+	'GS01' => 'Upgrade all fields to level 10',
 	'GS02' => 'Increase storage',
 	'GS02I' => 'Increases current storage capacity by a level 20 storage.',
 	'GS03' => 'Clean training queue',

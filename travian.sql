@@ -461,7 +461,11 @@ CREATE TABLE `config` (
   `fvillage` int(11) NOT NULL,
   `fvillaged` int(11) NOT NULL,
   `MEDALS` int(11) NOT NULL,
-  `allowBuyRes` tinyint(1) NOT NULL
+  `allowBuyRes` tinyint(1) NOT NULL DEFAULT 0,
+  `allResPrice` INT(5) NOT NULL DEFAULT 45,
+  `allowQuickTraining` tinyint(1) NOT NULL DEFAULT 0,
+  `allowQuickTraining` TINYINT NOT NULL DEFAULT 0, 
+  `allowTrainingBoost` TINYINT NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
