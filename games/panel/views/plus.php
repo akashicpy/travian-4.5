@@ -1,8 +1,5 @@
 <div class="card">
     <div class="card-header">Plus Settings</div>
-    <pre>
-        <?= print_r($config); ?>
-    </pre>
     <div class="card-body">
         <?php
         if (isset($_POST['update'])) {
@@ -136,6 +133,48 @@
             </div>
             <div class="form-group row">
                 <div class="col-md-6">
+                    <label>Allow buy resources</label>
+                    <select name="allowBuyRes" class="form-control">
+                    <option <?php if ($config['allowBuyRes'] == 0) {
+                        echo "selected";
+                    } ?> value="0">disable</option>
+                    <option <?php if ($config['allowBuyRes'] == 1) {
+                        echo "selected";
+                    } ?> value="1">enable</option>
+                </select>
+                </div>
+                <div class="col-md-6">
+                    <label>Upgrade all resource to lv.10 price</label>
+                    <input name="" class="form-control" value="<?php echo $config['upAllResPrice']; ?>">
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label>Allow instant training</label>
+                    <select name="allowQuickTraining" class="form-control">
+                    <option <?php if ($config['allowQuickTraining'] == 0) {
+                        echo "selected";
+                    } ?> value="0">disable</option>
+                    <option <?php if ($config['allowQuickTraining'] == 1) {
+                        echo "selected";
+                    } ?> value="1">enable</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label>Allow training boost</label>
+                    <select name="allowTrainingBoost" class="form-control">
+                    <option <?php if ($config['allowTrainingBoost'] == 0) {
+                        echo "selected";
+                    } ?> value="0">disable</option>
+                    <option <?php if ($config['allowTrainingBoost'] == 1) {
+                        echo "selected";
+                    } ?> value="1">enable</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
                     <label>storage upgrade</label>
                     <input name="storageUpgrade" class="form-control" value="<?php echo $config['storageUpgrade']; ?>">
                 </div>
@@ -154,6 +193,9 @@
                     <input name="searchAll" class="form-control" value="<?php echo $config['searchAll']; ?>">
                 </div>
             </div>
+
+            <hr>
+            <h6>Resource packages</h6>
             <div class="form-group row">
                 <div class="col-md-6">
                     <label>Resources first package price</label>
@@ -183,7 +225,8 @@
                 <label>Resources third package quantity</label>
                 <input name="resources03A" class="form-control" value="<?php echo $config['resources03A']; ?>">
             </div>
-
+            <hr>
+            <h6>Beginner protection packages</h6>
             <div class="form-group row">
                 <div class="col-md-6">
                     <label>1 hour protection</label>

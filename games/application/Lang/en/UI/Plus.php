@@ -121,8 +121,8 @@ $lang['Plus'] = array(
 	'GS04I' => 'You can train faster in all of your village in this period.',
 	'GS05' => 'Upgrade all units to the maximum level in the smithy',
 	'GS05I' => 'Upgrade all units to the maximum level in the smithy.',
-	'GS06' => 'Search for all units in the academy',
-	'GS06I' => 'Search for all units in the academy, no need to search anymore.',
+	'GS06' => 'Research all units in the academy',
+	'GS06I' => 'Research all units in the academy, no need to research anymore.',
 
 	'PR01' => 'Protection',
 	'PR02' => 'With protection enabled no one can attack you when you are away.',

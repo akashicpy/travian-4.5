@@ -3513,7 +3513,7 @@ Travian.Tip.refresh();
             });
             </script></div><div class="featureDuration featureRenewal featureButtonSubtitle subtitle">' . $lang['Plus']['Deliver'] . ': <span class="bold">' . $lang['Plus']['Immidiate'] . '</span>    </div></div></div>
             
-            ' . ($config['25pFaster'] ? '<div class="feature featureBooking "><input type="hidden" class="premiumFeatureName hide" name="featureName" value="fasterTraining"><div class="featureContent"><h3 class="featureTitle">' . $lang['Plus']['GS04'] . '</h3><div class="featureRemainingTime featureSubtitle subtitle"><span class="">' . $lang['Plus']['GS04I'] . '</span></div><div class="featureButton"><button type="button" class="gold prosButton fasterTraining" coins="' . $config['25pFaster'] . '" id="buttonn4" onclick=""><div class="button-container addHoverClick">
+            ' . ($config['allowTrainingBoost'] && $config['25pFaster'] ? '<div class="feature featureBooking "><input type="hidden" class="premiumFeatureName hide" name="featureName" value="fasterTraining"><div class="featureContent"><h3 class="featureTitle">' . $lang['Plus']['GS04'] . '</h3><div class="featureRemainingTime featureSubtitle subtitle"><span class="">' . $lang['Plus']['GS04I'] . '</span></div><div class="featureButton"><button type="button" class="gold prosButton fasterTraining" coins="' . $config['25pFaster'] . '" id="buttonn4" onclick=""><div class="button-container addHoverClick">
             <div class="button-background">
                 <div class="buttonStart">
                     <div class="buttonEnd">

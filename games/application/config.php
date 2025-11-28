@@ -102,7 +102,7 @@ define("RADIUS", 2); //делитель для максимального рад
 define("MAX_LEVEL", TRUE); //  With gold
 define("MAX_LEVEL_COST", 15); // With gold
 
-define("FINISH_ALL", TRUE); // Training With gold 
+define("FINISH_ALL", $sData['allowQuickTraining']); // Training With gold 
 define("FINISH_ALL_COST", 30);
 define("MEDALS", 259200); // distribution seconds
 
@@ -152,6 +152,7 @@ $config = array(
     'upAllResPrice' => $sData['upAllResPrice'],
     'allowQuickTraining' => $sData['allowQuickTraining'],
     'allowTrainingBoost' => $sData['allowTrainingBoost'],
+    'medalReset' => $sData['MEDALS'],
 );
 
 $packages = array(
