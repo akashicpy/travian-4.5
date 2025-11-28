@@ -1,6 +1,6 @@
 games/mcache/
 games/hcache/
-games/applications/queue2/
+games/application/queue2/
 
 # security configs
 config.php
