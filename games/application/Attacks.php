@@ -1443,7 +1443,7 @@ class Att
                     $speeds[] = ${"u" . (($this->att['tribe'] - 1) * 10 + $i)}['speed'];
                 }
             }
-            $database->addLog(json_encode($this->units));
+            // $database->addLog(json_encode($this->units));
             if ($this->data['t11'] > ${'dead11'}) {
                 $getHero = $database->getHeroData($this->att['owner']);
                 $speeds[] = $getHero['speed'];
@@ -2016,7 +2016,7 @@ Array ( [u1] => 0 [u2] => 0 [u3] => 0 [u4] => 0 [u5] => 0 [u6] => 0 [u7] => 0 [u
             }
 
             $speeds = array();
-            $database->addLog("unit speeds" . $speeds);
+            // $database->addLog("unit speeds" . $speeds);
             $database->modifyUnit(
                 $this->data['to'],
                 array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
