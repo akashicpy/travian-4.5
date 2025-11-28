@@ -11,7 +11,7 @@ class Ranking
     }
 
     public function getUserRank($ref)
-    {        
+    {
         $ranking = $this->rankarray;
         $set = (is_numeric($ref)) ? 'userid' : 'username';
         for ($i = 1; $i <= (count($ranking)); $i++) {
@@ -24,18 +24,21 @@ class Ranking
     }
 
     public function getUserRankIn($ref, $type)
-    {        
+    {
         global $database;
-        switch($type){
-            case 1: $get = 'apall'; break;
-            case 2: $get = 'dpall'; break;
-        }
-        $i=0;
-        foreach($database->query("SELECT * FROM users ORDER BY ".$get." DESC") as $user){
-            $i++;
-            if($user['id'] == $ref){
-                return $i;
+        switch ($type) {
+            case 1:
+                $get = 'apall';
                 break;
+            case 2:
+                $get = 'dpall';
+                break;
+        }
+        $i = 0;
+        foreach ($database->query("SELECT * FROM users ORDER BY " . $get . " DESC") as $user) {
+            $i++;
+            if ($user['id'] == $ref) {
+                return $i;
             }
         }
     }
@@ -218,6 +221,7 @@ class Ranking
 
 			FROM users
 			WHERE users.access <> 8  AND id>4
+            AND username <> 'Multihunter'
 			ORDER BY totalpop DESC,userid DESC";
 
         $datas = $database->query($q);
@@ -255,6 +259,7 @@ class Ranking
 			)allitag
 			FROM users
 			WHERE users.access <> 8 AND id>4
+            AND users.username <> 'Multihunter'
 			 ORDER BY totalpop DESC, userid DESC";
 
         $datas = $database->query($q);
@@ -300,7 +305,7 @@ class Ranking
 			AND users.id = userid
 			)allitag
 			FROM users
-			WHERE users.tribe = '".$race."' AND users.access < " . (INCLUDE_ADMIN ? "10" : "8") . "  and id>4
+			WHERE users.tribe = '" . $race . "' AND users.access < " . (INCLUDE_ADMIN ? "10" : "8") . "  and id>4
 			ORDER BY totalpop DESC, userid DESC";
 
 
@@ -336,7 +341,7 @@ class Ranking
 			WHERE vdata.owner = userid
 			)pop
 			FROM users
-			WHERE users.apall >=0 AND users.access < " . (INCLUDE_ADMIN ? "10" : "8") . "   and id>4
+			WHERE users.apall >=0 AND users.access < " . (INCLUDE_ADMIN ? "10" : "8") . "   and id>4 AND users.username <> 'Multihunter'
 			ORDER BY users.apall DESC,  userid DESC";
         $datas = $database->query($q);
 
@@ -375,7 +380,7 @@ class Ranking
 			WHERE vdata.owner = userid
 			)pop
 			FROM users
-			WHERE users.dpall >=0 AND users.access < " . (INCLUDE_ADMIN ? "10" : "8") . " and id>4
+			WHERE users.dpall >=0 AND users.access < " . (INCLUDE_ADMIN ? "10" : "8") . " and id>4 AND username <> 'Multihunter'
 			ORDER BY users.dpall DESC,userid DESC";
         $datas = $database->query($q);
 
@@ -401,7 +406,7 @@ class Ranking
     {
         global $database;
         $array = $database->getARanking();
-        $holder  = array();
+        $holder = array();
 
         foreach ($array as $value) {
             $members = $database->getAllMemO($value['id']);
@@ -438,7 +443,7 @@ class Ranking
                 $args[$n] = $tmp;
             }
         }
-        $args[] = & $data;
+        $args[] = &$data;
         call_user_func_array('array_multisort', $args);
         return array_pop($args);
     }
@@ -447,47 +452,47 @@ class Ranking
     {
         global $database;
 
-        $now=$this->procRankArray2();
+        $now = $this->procRankArray2();
         $q = "SELECT max(week) as max FROM medal where allycheck=0";
         $result = $database->query($q);
-        if(count($result)) {
-            $row=$result[0];
-            $week=($row['max']+1);
+        if (count($result)) {
+            $row = $result[0];
+            $week = ($row['max'] + 1);
         } else {
-            $week=1;
+            $week = 1;
         }
-        $i=0;
+        $i = 0;
         foreach ($now as $session) {
 
-         $i++;
+            $i++;
             $oldrank = $i;
-if($week>1){
-            if ($session['oldrank'] > $oldrank) {
-                $totalpoints = $session['oldrank'] - $oldrank;
-                $database->addclimberrankpop($session['userid'], $totalpoints);
-                $database->updateoldrank($session['userid'], $oldrank);
-            } elseif ($session['oldrank'] < $oldrank) {
-                if ($session['oldrank'] != 0) {
-                    $totalpoints = $oldrank - $session['oldrank'];
-                } else {
-                    $totalpoints = 0;
+            if ($week > 1) {
+                if ($session['oldrank'] > $oldrank) {
+                    $totalpoints = $session['oldrank'] - $oldrank;
+                    $database->addclimberrankpop($session['userid'], $totalpoints);
+                    $database->updateoldrank($session['userid'], $oldrank);
+                } elseif ($session['oldrank'] < $oldrank) {
+                    if ($session['oldrank'] != 0) {
+                        $totalpoints = $oldrank - $session['oldrank'];
+                    } else {
+                        $totalpoints = 0;
+                    }
+
+                    if ($totalpoints != 0) {
+                        $database->removeclimberrankpop($session['userid'], $totalpoints);
+                    }
+                    $database->updateoldrank($session['userid'], $oldrank);
                 }
 
-                if ($totalpoints != 0) {
-                    $database->removeclimberrankpop($session['userid'], $totalpoints);
-                }
-                $database->updateoldrank($session['userid'], $oldrank);
+            } else {
+                $this->procRankArray();
+                $newrank = $this->getUserRank($session['userid']);
+                $totalpoints = count($this->getRank()) - $newrank;
+                $database->setclimberrankpop($session['userid'], $totalpoints);
+                $database->updateoldrank($session['userid'], $newrank);
+
+
             }
-
-}else{
-    $this->procRankArray();
-    $newrank = $this->getUserRank($session['userid']);
-    $totalpoints = count($this->getRank()) - $newrank;
-    $database->setclimberrankpop($session['userid'], $totalpoints);
-    $database->updateoldrank($session['userid'], $newrank);
-
-
-}
         }
     }
 

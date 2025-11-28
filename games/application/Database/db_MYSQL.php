@@ -6154,7 +6154,7 @@ class MYSQL_DB extends DB
 
 		$p = array('T' => $tribe);
 
-		$q = "SELECT count(*) as sum FROM users where `tribe` = :T";
+		$q = "SELECT count(*) as sum FROM users where `tribe` = :T AND username <> 'Multihunter'";
 
 		return $this->single($q, $p);
 
@@ -7417,7 +7417,7 @@ class MYSQL_DB extends DB
 
 			$p = '';
 
-			$q = "SELECT id,username," . $what . " FROM users WHERE  id > 5 AND `" . $what . "` >= 0  ORDER BY `" . $what . "`  DESC Limit 10";
+			$q = "SELECT id,username," . $what . " FROM users WHERE  id > 5 AND `" . $what . "` >= 0 AND username <> 'Multihunter' ORDER BY `" . $what . "`  DESC Limit 10";
 
 		} else {
 
@@ -9086,7 +9086,7 @@ class MYSQL_DB extends DB
 
 
 
-		$q = "SELECT h.level,h.experience,h.uid,u.username FROM hero as h LEFT JOIN users as u ON u.id=h.uid WHERE h.dead = 0 ORDER BY h.experience DESC";
+		$q = "SELECT h.level,h.experience,h.uid,u.username FROM hero as h LEFT JOIN users as u ON u.id=h.uid WHERE h.dead = 0 AND u.tribe <> 5 AND u.access <> 9  ORDER BY h.experience DESC";
 
 		return $this->query($q);
 
